@@ -1,0 +1,1 @@
+docker stop joshua_image_store_service

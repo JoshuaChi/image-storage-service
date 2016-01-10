@@ -1,0 +1,30 @@
+nginx:
+  image: nginx:latest
+  ports:
+    - "80:80"
+
+eureka:
+  image: springcloud/eureka
+  ports:
+    - "8761:8761"
+#
+#imageservice:
+#  image: java:openjdk-8u45-jdk
+#  working_dir: /app
+#  volumes:
+#    - spring-boot-restful-service/build/libs:/app
+#  command: java -jar /app/spring-boot-restful-service.jar --spring.profiles.active=enableEureka --eureka.client.serviceUrl.defaultZone=http://eureka:8761/eureka/
+#  ports:
+#    - "8081:8080"
+#  links:
+#    - nginx
+#    - eureka
+#  environment:
+##    SPRING_DATA_MONGODB_URI: mongodb://mongodb/userregistration
+##    SPRING_RABBITMQ_HOST: rabbitmq
+#    SPRING_APPLICATION_NAME: image-store-service
+## For some reason this didn't work
+##    EUREKA_CLIENT_SERVICE_URL_DEFAULT_ZONE: http://eureka:8761/
+##    EUREKA_INSTANCE_NON_SECURE_PORT: 8080
+##    EUREKA_INSTANCE_NON_SECURE_PORT: 8081
+##    EUREKA_INSTANCE_PREFER_IP_ADDRESS: true
